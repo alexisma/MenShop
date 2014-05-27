@@ -23,8 +23,8 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-				
-      <div class="top-bar">
+			
+       <div class="top-bar">
         <div class="container">
           <div class="row">
           
@@ -35,25 +35,25 @@
             <div class="span9 menu clearfix">
               <ul class="clearfix rr">
                 <li>
-                  <a href="#">
+                  <a href="#/account">
                     <span class="ir icon my-account"></span>
                     <span>My account</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="#/wishlist">
                     <span class="ir icon my-wishlist"></span>
                     <span>My wishlist</span>
                   </a>
-                </li>
+                 </li>
                 <li>
-                  <a href="#">
+                  <a href="#/checkout">
                     <span class="ir icon checkout"></span>
                     <span>Checkout</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="#/login">
                     <span class="ir icon log-in"></span>
                     <span>Log in</span>
                   </a>
@@ -76,23 +76,14 @@
             </a>
           </div>
           
-          <div class="span5 collections">
-            <div><span class="ir arrow up">Up</span></div>
-            <div>
-              <ul class="content rr">
-                <li class="current"><a href="4-product-list.html">Fashion Collection for September 2012</a></li>
-                <li><a href="4-product-list.html">Fashion Collection for August 2012</a></li>
-                <li><a href="4-product-list.html">Fashion Collection for July 2012</a></li>
-              </ul>
-            </div>
-            <div><span class="ir arrow down">Down</span></div>
-          </div>
+            
+                <li class="current"><p>Fashion Collection for June 2014</p></li>
           
+            
           <div class="span4">
           
             <div class="row">
-              
-              
+                            
               
               <div class="span1 f-select-wrapper">
               
@@ -109,8 +100,8 @@
             
             <div class="shopping-cart">
               <span class="icon ir">Cart</span>
-              <span class="text"><a href="#"><span class="title">Shopping Cart</span></a> (<span>0</span> items) - </span>
-              <span class="price"><span>$</span><span>0.00</span></span>
+              <span class="text"><a href="#"><span class="title">Shopping Cart</span></a> (<span>{{cart.cant}}</span> items) - </span>
+              <span class="price"><span>$</span><span>{{cart.total}}</span></span>
             </div>
             
           </div>
@@ -201,11 +192,11 @@
                 <li class="slide-1">
                   <div class="slide">
                     <figure>
-                      <img src="./public/images/ph/ph-home-banner-1.png" alt=""/>
+                      <img src="{{slide1.img}}" alt=""/>
                     </figure>
                     <div class="content-wrapper">
                       <div class="content">
-                        <h1>SHOES FOR MEN 2012</h1>
+                        <h1>{{slide1.name}}</h1>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at nunc a magna tincidunt placerat. In hac habitasse platea dictumst. Donec in tellus libero. Lorem ipsum dolor sit amet, consectetur adipis.
                         </p>
@@ -217,11 +208,11 @@
                 <li class="slide-2 current">
                   <div class="slide">
                     <figure>
-                      <img src="./public/images/ph/ph-home-banner-2.png" alt=""/>
+                      <img src="{{slide2.img}}" alt=""/>
                     </figure>
                     <div class="content-wrapper">
                       <div class="content">
-                        <h1>back to office men style</h1>
+                        <h1>{{slide2.name}}</h1>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at nunc a magna tincidunt placerat. In hac habitasse platea dictumst. Donec in tellus libero. Lorem ipsum dolor sit amet, consectetur adipis.
                         </p>
@@ -233,11 +224,11 @@
                 <li class="slide-3">
                   <div class="slide">
                     <figure>
-                      <img src="./public/images/ph/ph-home-banner-1.png" alt=""/>
+                      <img src="{{slide1.img}}" alt=""/>
                     </figure>
                     <div class="content-wrapper">
                       <div class="content">
-                        <h1>SHOES FOR MEN 2012</h1>
+                        <h1>{{slide3.name}}</h1>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at nunc a magna tincidunt placerat. In hac habitasse platea dictumst. Donec in tellus libero. Lorem ipsum dolor sit amet, consectetur adipis.
                         </p>
@@ -249,11 +240,11 @@
                 <li class="slide-4">
                   <div class="slide">
                     <figure>
-                      <img src="./public/images/ph/ph-home-banner-2.png" alt=""/>
+                      <img src="{{slide3.img}}" alt=""/>
                     </figure>
                     <div class="content-wrapper">
                       <div class="content">
-                        <h1>back to office men style</h1>
+                        <h1>{{slide4.name}}</h1>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at nunc a magna tincidunt placerat. In hac habitasse platea dictumst. Donec in tellus libero. Lorem ipsum dolor sit amet, consectetur adipis.
                         </p>
@@ -281,7 +272,7 @@
                       <div class="triangle ir">Triangle</div>
                       <div class="button" id="open-slide-1">
                         <span class="splitter">Splitter</span>
-                        Fashion Collection 2012
+                        Fashion Collection 2014
                       </div>
                     </li>
                     <li class="span3 alpha25 current">                    
@@ -295,7 +286,7 @@
                       <div class="triangle ir">Triangle</div>
                       <div class="button" id="open-slide-3">
                         <span class="splitter">Splitter</span>
-                        New Trend 2013
+                        New Trend
                       </div>
                     </li>
                     <li class="span3 alpha25">
@@ -327,183 +318,32 @@
             </div>
           </div>
         </div>
+        
+        <!-- Comienza la lista en cuadricula aplicando ng-repeat -->
         <ul class="row-fluid clearfix rr popular-products grid-display">
-          <li class="span3 alpha25 desat">
+          <li class="span3 alpha25 desat" ng-repeat="item in items">
             <div class="prod-wrapper">
               <span class="badge corner-badge hot ir hidden">Hot</span>
               <span class="badge price-badge">
                 <span class="value">
                   <span>$</span>
-                  <span>150</span>
+                  <span>item.price</span>
                 </span>
               </span>    
-              <a href="5-product-details.html">
-                <img src="./public/images/ph/ph-home-big-2.png" class="desat-ie" alt=""/>
+              <a href="#/detail/{{product.id}}">
+                <img src="./public/images/ph/{{item.img}}" class="desat-ie" alt=""/>
               </a>
             
               <span class="info gradient">
-                <span class="title">Men glass mode 2012</span>
+                <span class="title">{{item.descrip}}</span>
                 <span class="add-to-cart clearfix">
                   <span class="icon ir">Cart</span>
-                  <a href="7-cart.html" class="text">Add To Cart</a>
+                  <a href="#/addtocart:{{item}}" class="text">Add To Cart</a>
                 </span>
               </span>
             </div>
           </li>
-          <li class="span3 alpha25 desat">
-            <div class="prod-wrapper">
-              <span class="badge corner-badge hot ir">Hot</span>
-              <span class="badge price-badge">
-                <span class="value">
-                  <span>$</span>
-                  <span>150</span>
-                </span>
-              </span>    
-              <a href="5-product-details.html">
-                <img src="./public/images/ph/ph-home-big-1.png" class="desat-ie" alt=""/>
-              </a>
-            
-              <span class="info gradient">
-                <span class="title">Men glass mode 2012</span>
-                <span class="add-to-cart clearfix">
-                  <span class="icon ir">Cart</span>
-                  <a href="7-cart.html" class="text">Add To Cart</a>
-                </span>
-              </span>
-            </div>
-          </li>
-          <li class="span3 alpha25 desat">
-            <div class="prod-wrapper">
-              <span class="badge corner-badge hot ir hidden">Hot</span>
-              <span class="badge price-badge">
-                <span class="value">
-                  <span>$</span>
-                  <span>150</span>
-                </span>
-              </span>    
-              <a href="5-product-details.html">
-                <img src="./public/images/ph/ph-home-big-3.png" class="desat-ie" alt=""/>
-              </a>
-            
-              <span class="info gradient">
-                <span class="title">Men glass mode 2012</span>
-                <span class="add-to-cart clearfix">
-                  <span class="icon ir">Cart</span>
-                  <a href="7-cart.html" class="text">Add To Cart</a>
-                </span>
-              </span>
-            </div>
-          </li>
-          <li class="span3 alpha25 desat">
-            <div class="prod-wrapper">
-              <span class="badge corner-badge hot ir">Hot</span>
-              <span class="badge price-badge">
-                <span class="value">
-                  <span>$</span>
-                  <span>150</span>
-                </span>
-              </span>    
-              <a href="5-product-details.html">
-                <img src="./public/images/ph/ph-home-big-4.png" class="desat-ie" alt=""/>
-              </a>
-            
-              <span class="info gradient">
-                <span class="title">Men glass mode 2012</span>
-                <span class="add-to-cart clearfix">
-                  <span class="icon ir">Cart</span>
-                  <a href="7-cart.html" class="text">Add To Cart</a>
-                </span>
-              </span>
-            </div>
-          </li>
-          <li class="span3 alpha25 desat">
-            <div class="prod-wrapper">
-              <span class="badge corner-badge hot ir">Hot</span>
-              <span class="badge price-badge">
-                <span class="value">
-                  <span>$</span>
-                  <span>150</span>
-                </span>
-              </span>    
-              <a href="5-product-details.html">
-                <img src="./public/images/ph/ph-home-big-5.png" class="desat-ie" alt=""/>
-              </a>
-            
-              <span class="info gradient">
-                <span class="title">Men glass mode 2012</span>
-                <span class="add-to-cart clearfix">
-                  <span class="icon ir">Cart</span>
-                  <a href="7-cart.html" class="text">Add To Cart</a>
-                </span>
-              </span>
-            </div>
-          </li>
-          <li class="span3 alpha25 desat">
-            <div class="prod-wrapper">
-              <span class="badge corner-badge hot ir hidden">Hot</span>
-              <span class="badge price-badge">
-                <span class="value">
-                  <span>$</span>
-                  <span>150</span>
-                </span>
-              </span>    
-              <a href="5-product-details.html">
-                <img src="./public/images/ph/ph-home-big-6.png" class="desat-ie" alt=""/>
-              </a>
-            
-              <span class="info gradient">
-                <span class="title">Men glass mode 2012</span>
-                <span class="add-to-cart clearfix">
-                  <span class="icon ir">Cart</span>
-                  <a href="7-cart.html" class="text">Add To Cart</a>
-                </span>
-              </span>
-            </div>
-          </li>
-          <li class="span3 alpha25 desat">
-            <div class="prod-wrapper">
-              <span class="badge corner-badge hot ir hidden">Hot</span>
-              <span class="badge price-badge">
-                <span class="value">
-                  <span>$</span>
-                  <span>150</span>
-                </span>
-              </span>    
-              <a href="5-product-details.html">
-                <img src="./public/images/ph/ph-home-big-7.png" class="desat-ie" alt=""/>
-              </a>
-            
-              <span class="info gradient">
-                <span class="title">Men glass mode 2012</span>
-                <span class="add-to-cart clearfix">
-                  <span class="icon ir">Cart</span>
-                  <a href="7-cart.html" class="text">Add To Cart</a>
-                </span>
-              </span>
-            </div>
-          </li>
-          <li class="span3 alpha25 desat">
-            <div class="prod-wrapper">
-              <span class="badge corner-badge hot ir hidden">Hot</span>
-              <span class="badge price-badge">
-                <span class="value">
-                  <span>$</span>
-                  <span>150</span>
-                </span>
-              </span>    
-              <a href="5-product-details.html">
-                <img src="./public/images/ph/ph-home-big-8.png" class="desat-ie" alt=""/>
-              </a>
-            
-              <span class="info gradient">
-                <span class="title">Men glass mode 2012</span>
-                <span class="add-to-cart clearfix">
-                  <span class="icon ir">Cart</span>
-                  <a href="7-cart.html" class="text">Add To Cart</a>
-                </span>
-              </span>
-            </div>
-          </li>
+          
         </ul>
         
         <div class="row top-spacing">
@@ -514,78 +354,7 @@
             </div>
           </div>
         </div>
-        
-        <div id="other-prod-slider">
-          <div class="navigation"></div>
-          <ul class="row-fluid clearfix rr other-products">
-            <li class="span3 alpha25 desat">
-              <a href="5-product-details.html">
-                <span class="badge off ir hidden">Off</span>              
-                <img src="./public/images/ph/ph-home-small-1.png" alt=""/>
-              </a>
-              <span class="info">
-                <span class="title">Men glass mode 2012</span>
-                <span class="price">
-                  <span class="old hidden"><span>$</span><span>100</span> - </span>
-                  <span class="actual"><span>$</span><span>100</span></span>
-                </span>
-              </span>
-            </li>
-            <li class="span3 alpha25 desat">
-              <a href="5-product-details.html">
-                <span class="badge off ir hidden">Off</span>              
-                <img src="./public/images/ph/ph-home-small-2.png" alt=""/>
-              </a>
-              <span class="info">
-                <span class="title">Men glass mode 2012</span>
-                <span class="price">
-                  <span class="old hidden"><span>$</span><span>100</span> - </span>
-                  <span class="actual"><span>$</span><span>100</span></span>
-                </span>
-              </span>
-            </li>
-            <li class="span3 alpha25 desat">
-              <a href="5-product-details.html">
-                <span class="badge off ir hidden">Off</span>              
-                <img src="./public/images/ph/ph-home-small-3.png" alt=""/>
-              </a>
-              <span class="info">
-                <span class="title">Men glass mode 2012</span>
-                <span class="price">
-                  <span class="old"><span>$</span><span>100</span> - </span>
-                  <span class="actual"><span>$</span><span>100</span></span>
-                </span>
-              </span>
-            </li>
-            <li class="span3 alpha25 desat">
-              <a href="5-product-details.html">
-                <span class="badge off ir">Off</span>              
-                <img src="./public/images/ph/ph-home-small-4.png" alt=""/>
-              </a>
-              <span class="info">
-                <span class="title">Men glass mode 2012</span>
-                <span class="price">
-                  <span class="old hidden"><span>$</span><span>100</span> - </span>
-                  <span class="actual"><span>$</span><span>100</span></span>
-                </span>
-              </span>
-            </li>
-            <li class="span3 alpha25 desat">
-              <a href="5-product-details.html">
-                <span class="badge off ir">Off</span>              
-                <img src="./public/images/ph/ph-home-small-3.png" alt=""/>
-              </a>
-              <span class="info">
-                <span class="title">Men glass mode 2012</span>
-                <span class="price">
-                  <span class="old hidden"><span>$</span><span>100</span> - </span>
-                  <span class="actual"><span>$</span><span>100</span></span>
-                </span>
-              </span>
-            </li>
-          </ul>
-        </div>
-        
+                      
       </div>
       
       
